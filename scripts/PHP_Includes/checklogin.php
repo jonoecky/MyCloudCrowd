@@ -2,7 +2,7 @@
 session_start();
 // If user is not logged in, header them away
 if(!isset($_SESSION['userEmail'])){
-	header('location: http://www.mycloudcrowd.co.uk/index.php');
+	header('location: index.php');
 	exit();
 }else{
 	$profilePicLastUpdate = $_SESSION['userProfilePicLastUpdate'];

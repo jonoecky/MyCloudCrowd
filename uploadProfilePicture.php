@@ -48,26 +48,56 @@ include 'scripts/PHP_Includes/header.php';
 				top.location = 'uploadProfilePicture.php?cancel';
 				return false;
 			}
-  
+			
+//AJAX call to PHP script and update the progress bar
+			function _(el){
+				return document.getElementById(el);
+			}
+			function uploadFile(){
+				var file = _("newPic").files[0];
+				var formdata = new FormData();
+				formdata.append("newPic", file);
+				var ajax = new XMLHttpRequest();
+				ajax.upload.addEventListener("progress", progressHandler, false);
+				ajax.addEventListener("load", completeHandler, false);
+				ajax.addEventListener("error", errorHandler, false);
+				ajax.addEventListener("abort", abortHandler, false);
+				ajax.open("POST", "scripts/PHP_Includes/profilePictureUploader.php", true);
+				ajax.send(formdata);
+			}
+			function progressHandler(event){
+				var percent = (event.loaded / event.total) * 100;
+				_("progressBar").value = Math.round(percent);
+				_("status").innerHTML = Math.round(percent)+"% uploaded... please wait";
+			}
+			function completeHandler(event){
+				_("status").innerHTML = event.target.responseText;
+				_("progressBar").value = 0;
+			}
+			function errorHandler(event){
+				_("status").innerHTML = "Upload Failed";
+			}
+			function abortHandler(event){
+				_("status").innerHTML = "Upload Aborted";
+			}
+			
+			
+  			
         </script>
-		
-		
 		<meta>
 		<title>Upload Profile Picture</title>
 	</head>
 <body>
-<form enctype="multipart/form-data" action="scripts/PHP_Includes/profilePictureUploader.php" method="post">
-	<input type="file" name="uploadedProfilePicture" value="Upload Profile Picture">
-	<input type="submit" value="Upload">
+
+<form id="upload_form" enctype="multipart/form-data" method="post">
+	<input type="file" name="newPic" id="newPic">
+	<input type="button" value="Upload File" onclick="uploadFile()"><p>
+	<progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
+	<span id="status"></span>
 </form>
 
 <div id="Overlay"></div>
 <div id="wrapper" >
-
-<?php if($_SESSION['uploadFinished'] == true){?>
-	<script>
-	 $('#Overlay').show();
-	</script>
 
     <div id="CroppingContainer" >  
     
@@ -103,7 +133,6 @@ include 'scripts/PHP_Includes/header.php';
             </div>            
             
     </div><!-- CroppingContainer -->
- <?php };?>
  
  
     <br /><br />

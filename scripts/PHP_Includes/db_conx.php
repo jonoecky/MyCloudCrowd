@@ -1,6 +1,6 @@
 <?php
 //Database information
-$host = "localhost"; $id = "root"; $psw = ""; $db = "mycloudcrowd";
+$host = "localhost"; $id = "root"; $psw = ""; $db = "mycloudcrowd_co";
 
 //Connection String
 $con = mysql_connect($host, $id, $psw) or die('Connection Issues: '.mysql_error());

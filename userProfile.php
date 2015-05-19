@@ -54,7 +54,14 @@ include ('scripts/PHP_Includes/header.php');
 					<a href="updateCV.php" style='display:<?echo $display2?>'> Upload CV</a>
 				</span>
 		</div>
-		<?php echo $getDownloadCV?>
+		<?php
+			if(isset($getDownload)){
+				echo $getDownloadCV;
+			}else{
+				echo "There is no information to display about this users CV right now.. <p> 
+				Please check back when the user has updated their information.";
+			}
+		?>
 	</div>
 	
 	<div id="aboutMe">
@@ -64,7 +71,14 @@ include ('scripts/PHP_Includes/header.php');
 					<a href="editAboutMe.php" style='display:<?echo $display2?>'>Edit</a>
 			</span>
 		</div>
-		<?php echo $getAboutMe?>
+		<?php
+			if(isset($getAboutMe)){
+				echo $getAboutMe;
+			}else{
+				echo "There is no ABOUT ME information to display for this user right now.. <p>
+				Please check back when the user has updated their information.";
+			}
+		?>
 		<div class="infoShowMore">
 			<a href="meShowMore.php">Show more</a>
 		</div>
@@ -77,7 +91,14 @@ include ('scripts/PHP_Includes/header.php');
 					<a href="editEducation.php" style='display:<?echo $display2?>'>Edit</a>
 			</span>
 		</div>
-		<?php echo $getEducation?>
+		<?php
+			if(isset($getEducation)){
+				echo $getEducation;
+			}else{
+				echo "There is no information to display about this user's EDUCATION right now.. <p>
+				Please check back when the user has updated their information.";
+			}
+		?>
 		<div class="infoShowMore">
 			<a href="educationShowMore.php">Show more</a>
 		</div>
@@ -90,7 +111,14 @@ include ('scripts/PHP_Includes/header.php');
 					<a href="editTraining.php" style='display:<?echo $display2?>'>Edit</a>
 			</span>
 		</div>
-		<?php echo $getTraining?>
+		<?php
+			if(isset($getTraining)){
+				echo $getTraining;
+			}else{
+				echo "There is no information to display about this user's TRAINING right now.. <p>
+				Please check back when the user has updated their information.";
+			}
+		?>
 		<div class="infoShowMore">
 			<a href="trainingShowMore.php">Show more</a>
 		</div>
@@ -103,7 +131,14 @@ include ('scripts/PHP_Includes/header.php');
 					<a href="editExperience.php" style='display:<?echo $display2?>'>Edit</a>
 			</span>
 		</div>
-		<?php echo $getExperience?>
+		<?php
+			if(isset($getExperience)){
+				echo $getExperience;
+			}else{
+				echo "There is no information to display about this user's EXPERIENCES right now.. <p>
+				Please check back when the user has updated their information.";
+			}
+		?>
 		<div class="infoShowMore">
 			<a href="experienceShowMore.php">Show more</a>
 		</div>
@@ -116,7 +151,14 @@ include ('scripts/PHP_Includes/header.php');
 					<a href="editWork.php" style='display:<?echo $display2?>'>Edit</a>
 			</span>
 		</div>
-		<?php echo $getWorkSHistory?>
+		<?php
+			if(isset($getWorkHistory)){
+				echo $getWorkHistory;
+			}else{
+				echo "There is no information to display about this user's WORK HISTORY right now.. <p>
+				Please check back when the user has updated their information.";
+			}
+		?>
 		<div class="infoShowMore">
 			<a href="workShowMore.php">Show more</a>
 		</div>
@@ -129,7 +171,14 @@ include ('scripts/PHP_Includes/header.php');
 					<a href="editSkills.php" style='display:<?echo $display2?>'>Edit</a>
 			</span>
 		</div>
-		<?php echo $getKeySkills?>
+		<?php
+			if(isset($getKeySkills)){
+				echo $getKeySkills;
+			}else{
+				echo "There is no information to display about this user's KEY SKILLS right now.. <p>
+				Please check back when the user has updated their information.";
+			}
+		?>
 		<div class="infoShowMore">
 			<a href="skillsShowMore.php">Show more</a>
 		</div>
@@ -142,7 +191,14 @@ include ('scripts/PHP_Includes/header.php');
 					<a href="editAditionalInfo.php" style='display:<?echo $display2?>'>Edit</a>
 			</span>
 		</div>
-		<?php echo $getAditionalInformation?>
+		<?php
+			if(isset($getAdditionalInformation)){
+				echo $getAdditionalInformation;
+			}else{
+				echo "There is no ADDITIONAL INFORMATION about this user right now.. <p>
+				Please check back when the user has updated their information.";
+			}
+		?>
 		<div class="infoShowMore">
 			<a href="infoShowMore.php">Show more</a>
 		</div>
