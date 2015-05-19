@@ -1,0 +1,99 @@
+@CHARSET "ISO-8859-1";
+/* ----------------------------------- CreateAd Rules -----------------------------------------*/
+
+#postAd{
+	font-weight:bold;
+	font-size:18px;
+	font-style:none;
+	float:right;
+	margin-right:20px;
+}
+
+#finish{
+	font-weight:normal;
+	font-size:15px;
+	font-style:italic;
+	float:right;
+	margin-right:3px;
+	margin-top:2px;
+}
+
+#createAdCenter{
+	width:710px;
+	height:735px;
+	margin:auto;
+	margin-top:10px;
+	box-shadow: 5px 5px 5px #bfbfbf;
+	padding-left:8px;
+	border-left-style: solid;
+	border-left-width:1px;
+	border-left-color:#F0F0F0;
+	border-top-style: solid;
+	border-top-width:1px;
+	border-top-color:#F0F0F0;
+}
+
+#createAdLeft{
+	width:350px;
+	height:auto;
+	float:left;
+}
+
+.creatAdTtitle{
+	font-size:17px;
+	font-weight:bold;
+	margin:10px;
+}
+
+.maxCharCount{
+	font-style:italic;
+	font-size:15px;
+	font-weight:normal;
+	color:#949494;
+}
+
+#uploadAdPhoto{
+	width:217px;
+	height:125px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#000000;
+	box-shadow:5px 5px 5px #949494;
+	margin-top:15px;
+}
+
+#uploadAdPhotoPlus{
+	width:50px;
+	height:50px;
+	margin-top:35px;
+	margin-left:85px;
+}
+
+#uploadAdPhotoText{
+	width:82px;
+	height:15px;
+	margin:auto;
+}
+
+#overViewTextarea{
+	width:300px;
+	height:120px;
+	resize:none;
+}
+
+#createAdRight{
+	width:360px;
+	height:450px;
+	float:right;
+}
+
+#createAdDetail{
+	width:730px;
+	height:250px;
+}
+
+#detailTextarea{
+	width:700px;
+	height:250px;
+	resize:none;
+}

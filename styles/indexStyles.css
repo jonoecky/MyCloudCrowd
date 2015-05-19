@@ -1,0 +1,146 @@
+body {
+    height:100%;
+    min-height:100%;
+    width:99%;
+    min-width:1250px;
+    position:static;
+    font-family: "Arial", "Sans-serif";
+    background-color: #d8d8d8;
+}
+
+#home_header{
+    background-color: #f4f4f4;
+    min-width: 1250px;
+    width: 100%%;
+    height: 100px;
+    box-shadow: 0px 5px 5px 1px #808080;
+    z-index:100;
+}
+
+#home_content{
+    height:500px;
+    width:100%;
+    min-width:1250px;
+    background-color:#ffffff;
+    z-index:1;
+    box-shadow: 0px 5px 5px 1px #808080;
+}
+
+#home_footer{
+    box-shadow: 0px 5px 5px 1px #808080;
+    width: 100%;
+    min-width:1250px;
+    height: 120px;
+    background-color: #f4f4f4;
+}
+
+#home_menu_holder{
+    margin:auto;
+    max-width:1000px;
+    font-size:10px;
+}
+
+#home_logo {
+    margin:auto;
+    float:left;
+    padding-top:3px;
+    font-weight:bold;
+}
+
+#signup_table{
+    margin-left:25px;
+}
+
+#home_pucture_caption {
+    font-size:14px;
+    font-weight:bold;
+}
+
+#home_login {
+    margin:auto;
+    padding-top:30px;
+    float:right;
+    background-color: #f4f4f4;
+}
+
+#home_content_table{
+    margin:auto;
+    padding:30px;
+}
+
+#enterEmailInput, #enterPasswordInput, #usernameInput, #reenterPasswordInput, #streetNameInput, #townInput, #countyInput{
+    width: 270px;
+    margin:auto;
+}
+
+#firstNameInput, #lastNameInput{
+	width: 127px;
+	margin: auto;
+}
+
+#houseNumberInput{
+    width:100px;
+}
+
+#create_account_text{
+    font-weight:bold;
+    font-size:15px;
+}
+
+#policy_text{
+    font-size:11px;
+    color: #808080;
+}
+
+#home_footer_text{
+    padding:20px;
+    font-size:12px;
+    margin:auto;
+    width:200px;
+}
+
+#first_name_WME{
+    color:red;
+}
+
+input.watermark { color: #525252; }
+	input {
+	padding:4px;
+	text-indent: 5px;
+	font-size:11px;
+}
+	
+#home_help{
+    color: red;
+}
+
+#how_does_it_work_table{
+    margin:auto;
+    width:450px
+}
+
+#how_does_it_work{
+    margin:auto;
+    width:320px;
+    padding:10px;
+    font-weight:bold;
+}
+
+.slider{
+	margin: auto;
+	width:500px;
+}
+
+#hover_over{
+    font-style:italic;
+    font-size:12px;
+    color:#808080;
+}
+
+.missingLbl{
+	color:#FF0000;
+	width:20px;
+	height:21px;
+	display:inline;
+}
+

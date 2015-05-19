@@ -1,0 +1,54 @@
+/* ----------------------------------- myAds Rules -----------------------------------------*/
+
+#myWorksGoToMyAds, #myAdsGoToMyWorks{
+	float:right;
+	margin-right:15px;
+	font-weight:bold;
+	font-size:20px;
+}
+
+#goTo{
+	float:right;
+	margin-right:5px;
+	margin-top:3px;
+	font-style:italic;
+}
+
+.myWorksHideScroll{
+	width:98%;
+	height:auto;
+	border-style:solid;
+	border-width:1px;
+	border-color:#000000;
+	box-shadow: 2px 0px 5px #949494;
+	margin:auto;
+	margin-top:20px;
+	overflow:hidden;
+}
+
+#myWorksBidding, #myWorksWatching{
+	width:107%;
+	height:auto;
+	max-height:600px;
+	overflow-y:scroll;
+	margin:auto;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+
+.myWorksDeleteBtn{
+	float:right;
+	margin-right:60px;
+	margin-top:8px;
+}
+
+.selectAdChkBx{
+	float:left;
+	z-index:1000;
+	position:absolute;
+	top:3px;
+	left:3px;
+	width:20px;
+	height:20px;
+}
+@CHARSET "ISO-8859-1";

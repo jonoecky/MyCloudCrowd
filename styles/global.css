@@ -1,0 +1,622 @@
+@CHARSET "ISO-8859-1";
+
+/* ----------------------------------- Global Rules -----------------------------------------*/
+
+a:link {color:#000000; text-decoration:none;}      /* unvisited link */
+a:visited {color:#000000; text-decoration:none;}  /* visited link */
+a:hover {color:#11E809; text-decoration:none;}  /* mouse over link */
+a:active {color:#000000; text-decoration:none;}
+
+/* -- Header Global -- */
+body {
+    height:870px;
+    
+    width:99%;
+    min-width:1250px;
+    position:static;
+    font-family: "Arial narrow", 'PT Sans Narrow', "Arial", "Sans-serif";
+    font-stretch: condensed;
+    background-color: #F0F0F0;
+}
+
+#header{
+    background-color: #FFFFFF;
+    min-width: 1366px;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0px 5px 5px 1px #B5B5B5;
+    z-index:100;
+    position: relative;
+    top:0px
+}
+
+.logo {
+	margin:auto;
+    float:left;
+    padding-top:3px;
+    font-weight:bold;
+    margin-right:5px;
+}
+
+#logo {
+	height: 46px;
+	width: auto;
+}
+
+.holder {
+	margin:auto;
+    max-width:1250px;
+    display: table;
+    font-size: 16px;
+	
+}
+#headViewProfile{
+	font-weight:normal;
+	font-size:14px;
+	font-style:italic;
+}
+
+#menuInput{
+    width:380px;
+    height: 30px;
+}
+
+.menuInputDiv{
+	margin:auto;
+    width:380px;
+    height: 30px;
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#helloSpan{
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	width: auto;
+	min-width: 100px;
+	font-weight:bold;
+}
+
+#headerUserPictreDiv{
+	position:relative;
+	height: 30px;
+	max-height:30px;
+	width:30px;
+	border-style:solid;
+	border-width:1px;
+	margin:7px;
+	margin-bottom:9px;
+}
+
+#goButtonSpan{
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	padding:3px;
+}
+
+#homeSpan{
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	padding:7px;
+	padding-left:20px;
+}
+
+#myWorksSpan {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	padding:7px;
+}
+
+#supportSpan {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	padding:7px;
+}
+
+#messageSpan {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	padding:7px;
+}
+
+#settingsSpan{
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	padding:7px;
+}
+
+#logOutSpan{
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	padding:7px;
+	font-size:14px;
+}
+
+#backgroundOuterBorder{
+	width: 1366px;
+	min-height: 768px;
+	height: 820px;
+	border-style: solid;
+	border-width: 7px;
+	color: white;
+	margin: auto;
+	margin-top: 20px;
+	 
+}
+
+#backgroundInnerBorder{
+	width: 1335px;
+	height: 790px;
+	border-style: solid;
+	border-width: 7px;
+	color: white;
+	margin: auto;
+	margin-top:7px;
+}
+
+#leftDiv{
+	color:black;
+	font-weight:bold;
+	border-style:solid;
+	border-width:1px;
+	border-color:#000000;
+	width:250px;
+	height:780px;
+	padding:5px;
+	margin:10px;
+	margin-right:15px;	
+	box-shadow: 5px 5px 10px 2px #B5B5B5;
+	float:left;
+	position:relative;
+	background-color:#F0F0F0;
+	overflow:hidden;
+}
+
+#userPhotoDiv{
+	width:230px;
+	height:230px;
+	margin:auto;
+	background-color:#ffffff;
+	border-style:solid;
+	border-color:#000000;
+	border-width:1px;
+	margin-bottom:5px;
+	overflow:hidden;
+}
+
+.userProfilePic{
+	width:228px;
+	height:auto;
+	margin:1px;
+}
+
+#userFeedbackDiv{
+	width:230px;
+	height:70px;
+	margin:auto;
+	background-color:#ffffff;
+	border-style:solid;
+	border-color:#000000;
+	border-width:1px;
+	margin-bottom:10px;
+}
+
+#percentageBar{
+	margin:9px;
+	border-style:solid;
+	height:50px;
+	width:210px;
+	border-width:1px;
+	border-color:#000000;
+	position:relative;
+	background-color:#72FF6E;
+}
+
+#centerPercentage{
+	margin-top:15px;
+	margin-left:9px;
+	border-style:solid;
+	height:20px;
+	width:190px;
+	border-width:1px;
+	border-color:#000000;
+	position:relative;
+	background-color:#ffffff;
+}
+
+#percentageColour{
+	height:20px;
+	position:relative;
+	border-right-style:solid;
+	border-color:#000000;
+	border-right-width:1px;
+	background-color:#11E809;
+	
+}
+
+#toggleContactView{
+	font-weight:normal;
+	font-size:14px;
+	font-style:italic;
+}
+
+#leftContactsScroll{
+	width:98%;
+	height:50%;
+	border-style:solid;
+	border-width:1px;
+	border-color:#000000;
+	margin:auto;
+	position:relative;
+	overflow: hidden;
+}
+
+#contactsDiv{
+	width:110%;
+	height: 100%;
+	background-color:#ffffff;
+	margin:auto;
+	overflow-y:scroll;
+	position:relative;
+}
+
+.userContacts{
+	width:53px;
+	height:53px;
+	border-style:solid;
+	border-width:1px;
+	position:relative;
+	float:left;
+	margin:3px;
+}
+
+#centerWrapper{
+	width:757px;
+	overflow:hidden;
+	height:auto;
+	float:left;
+	border-right-style:solid;
+	border-right-color:#000000;
+	border-right-width:1px;
+}
+
+#centerDiv{
+	color:black;
+	border-style:solid;
+	border-width:1px;
+	border-color:#000000;
+	width:764px;
+	height:780px;
+	padding:5px;
+	margin-top:10px;
+	box-shadow: 0px 0px 0px 1px #B5B5B5;
+	float:left;
+	margin:auto;
+	background-color:#FFFFFF;
+	position:relative;
+	overflow-y: scroll;
+	
+}
+
+.centerHeader{
+	font-weight:bold;
+	font-size:19px;
+}
+
+
+/* -- Footer Global -- */
+
+#rightDiv{
+	color:black;
+	font-weight:bold;
+	border-style:solid;
+	border-width:1px;
+	border-color:#000000;
+	width:250px;
+	height:780px;
+	padding:5px;
+	margin:10px;
+	margin-left:15px;
+	box-shadow: -5px 5px 10px 2px #B5B5B5;
+	float:left;
+	position:relative;
+	background-color:#F0F0F0;
+}
+
+#newsfeedDiv {
+	border-color:#ffffff;
+	position:relative;
+	bottom:2px;
+	height:63%;
+	margin:2px;
+}
+
+#viewAllNewsfeed{
+	font-style:italic;
+	font-weight:normal;
+}
+
+.microfeedItem{
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:#ffffff;
+	width:100%;
+	height:63px;
+	margin:auto;
+}
+
+.microfeedPic {
+	width:50px;
+	height:auto;
+	float:left;
+	margin:2px;
+	position:relative;
+}
+
+.microfeedStory{
+	font-weight:normal;
+	font-size:16px;
+}
+
+#messagesDiv{
+	border-top-style:solid;
+	border-top-width:2px;
+	border-top-color:#ffffff;
+	position:relative;
+	bottom:2px;
+	height:67%;
+	margin:2px;
+}
+
+#advertiseDiv{
+	border-top-style:solid;
+	border-top-width:2px;
+	border-top-color:#ffffff;
+	position:relative;
+	bottom:2px;
+	height:37%;
+	margin:2px;
+}
+
+#pickContactSpan{
+	font-weight:normal;
+	font-style:italic;
+	font-size:14px;
+}
+
+#messageContact{
+	width:99%;
+	height:10%;
+	position:relative;
+	top:0px;
+	border-top-style:solid;
+	border-left-style:solid;
+	border-right-style:solid;
+	border-top-width:1px;
+	border-left-width:1px;
+	border-right-width:1px;
+	border-color:#000000;
+	background-color: #ffffff;
+	margin:auto;
+	box-shadow:0px -3px 10px #D6D6D6 inset;
+}
+
+#messageContactPicture{
+	width:40px;
+	height:40px;
+	position:relative;
+	left:3px;
+	float:left;
+	top:7%;
+	border-style:solid;
+	border-width:1px;
+	border-color:#000000;
+}
+
+#contactNameDiv{
+	float:right;
+	position:relative;
+	margin-right:10px;
+}
+
+#hideMessageScroll{
+	width:99%;
+	overflow:hidden;
+	border-width:1px;
+	border-style:solid;
+	margin:auto;
+}
+
+#messageDisplayDiv{
+	width:107%;
+	height:60%;
+	background-color:#ffffff;
+	margin:auto;
+	overflow-y:scroll;
+}
+
+.userMessage, .contactMessage{
+	min-height:40px;
+	width:100%;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-bottom-color:#BFBFBF;
+	font-weight:normal;
+	font-size:16px;
+	box-shadow: 0px 2px 10px #D6D6D6;
+}
+
+.userMessageText, .contactMessageText{
+	margin-left:5px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-right: 5px;
+}
+
+.messageTime{
+	font-weight:normal;
+	font-size:11px;
+	font-style:italic;
+}
+
+.userMessage{
+	background-color:rgba(48, 255, 25, 0.5);
+}
+
+#typeMessageDiv{
+	width:99%;
+	height:20%;
+	background-color:#ffffff;
+	border-width:1px;
+	border-style:solid;
+	margin:auto;
+	margin-top:5px;
+}
+
+#messageInput{
+	height:100%;
+	width:85%;
+	float:left;
+    resize:none;
+    border:none;
+}
+
+#messageButton{
+	height:100%;
+	width:15%;
+	margin:auto;
+	background-color:#72FF6E;
+	position:relative;
+	float:left;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 100px; 
+	color:#ffffff;
+	  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+     box-shadow: -2px 2px 5px #949494;
+}
+
+/* -------- Adverts ---------- */
+
+.advertBack{
+	width:230px;
+	height:230px;
+	background-color:#F2F2F2;
+	border-style:solid;
+	border-width:1px;
+	border-color:#000000;
+	margin:5px;
+	float:left;
+	border-radius:5px;
+	box-shadow: 2px 2px 5px 1px #B5B5B5;
+	
+}
+
+.advertPicture{
+	width:217px;
+	height:125px;
+	background-color:#ffffff;
+	border-style:solid;
+	border-width:1px;
+	border-color:#000000;
+	margin:5px;
+	overflow: hidden;
+	position:relative;
+	box-shadow:5px 5px 5px #bfbfbf;
+	
+}
+
+.advertPicture:before{
+	  content: "";
+	  position: absolute;
+	  top: 0%;
+	  left: 0%;
+	  width: 0px;
+	  height: 0px;
+	  border-bottom: 40px solid #F0F0F0;
+	  border-left: 40px solid transparent;
+	  -webkit-box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
+	  -moz-box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
+	  box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
+	  
+}
+
+.advertPicture:after{
+	  content: "";
+	  position: absolute;
+	  top: 0%;
+	  left: 0%;
+	  width: 0px;
+	  height: 0px;
+	  border-top: 40px solid #F2F2F2; 
+	  border-right: 40px solid transparent;	
+}
+
+.adPic{
+	height: 115px;
+	width:207;;
+	margin:5px;
+}
+
+.advertTitle{
+	margin-left:7px;
+	font-weight:bold;
+	width:80%;
+}
+
+.advertPrice{
+	float:right;
+	font-weight:bold;
+	width:20%;
+}
+
+.advertContent{
+	margin:5px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

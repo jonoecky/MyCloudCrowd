@@ -1,0 +1,64 @@
+@CHARSET "ISO-8859-1";
+
+/* ----------------------------------- UserProfile Rules -----------------------------------------*/
+
+#addContact{
+	font-size:14px;
+	font-weight:normal;
+	font-style:italic;
+}
+
+#userDivLeft{
+	width:373px;
+	height: auto;
+	min-height: 600px;
+	float:left;
+	position: relative;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-right-color:#BFBFBF;
+}
+
+#basicInfo, #cv, #aboutMe, #education, #training, #experience, #workHistory, #keySkills, #aditionalInformation{
+	width:340px;
+	height: 135px;
+	position: relative;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-bottom-color:BFBFBF;
+	padding:15px;
+}
+
+.userInfoHeader{
+	font-weight:bold;
+	font-size:19px;
+}
+
+.userInfoUpdate{
+	font-weight:normal;
+	font-size:14px;
+	font-style:italic;
+	float:right;
+	position:relative;
+}
+
+.infoShowMore{
+	font-weight:normal;
+	font-size:14px;
+	font-style:italic;
+	float:right;
+	position:absolute;
+	right:10px;
+	bottom:10px;
+}
+
+#userDivRight{
+	width: 373px;
+	height: auto;
+	min-height: 600px;	
+	float:left;
+	position: relative;
+}
+
+
+

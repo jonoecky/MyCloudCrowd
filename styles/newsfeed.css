@@ -1,0 +1,12 @@
+@CHARSET "ISO-8859-1";
+/* ----------------------------------- Newsfeed Rules -----------------------------------------*/
+
+.newsfeedItem {
+	width:720px;
+	height:135px;
+	position:relative;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-bottom-color:BFBFBF;
+	padding:15px;
+}
