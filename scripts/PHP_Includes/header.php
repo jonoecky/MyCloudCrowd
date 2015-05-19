@@ -1,11 +1,11 @@
 <?php 
 include 'scripts/PHP_Includes/db_conx.php';
 //GET USERS PROFILE PICTURE TARGET TO BE DISPLAYED
-	$profilePicTarget = "../../users/" . "$username" . "/profilePic/" . "$profilePicLastUpdate" . ".jpg";
+	$profilePicTarget = "users/" . "$username" . "/profilePic/" . "$profilePicLastUpdate" . ".jpg";
 	
 // CHECK IF SIGNED IN USER OR VIEWING OTHER USER PROFILE PICTURE TO BE DISPLAYED
-	//$checkUser = $_GET['username'];
-	$selectProfPicLastUpda = "SELECT * FROM userData WHERE username='$username'";
+	$checkUser = isset($_GET['userName']);
+	$selectProfPicLastUpda = "SELECT * FROM userData WHERE username='$checkUser'";
 	$chKResult = mysql_query($selectProfPicLastUpda, $con)or die("ERROR".mysql_error());
 	$RtrnData = mysql_fetch_array($chKResult);
 	$lastUpdate = $RtrnData['profilePicLastUpdate'];
@@ -39,8 +39,8 @@ include 'scripts/PHP_Includes/db_conx.php';
 				<br/>
 				<div id="headViewProfile"><a href="userProfile.php?userName=<?php echo $username?>">View profile</a></div>
 			</span>
-				<a href="../../userProfile.php?userName=<?php echo $username?>"><img id="headerUserPictreDiv" src="<?php if($profilePicLastUpdate != null){echo $profilePicTarget;}else
-				{echo "../../images/testImages/profilePic.png";}?>" style="width: 30px; height: 30px;"></a>
+				<a href="userProfile.php?userName=<?php echo $username?>"><img id="headerUserPictreDiv" src="<?php if($profilePicLastUpdate != null){echo $profilePicTarget;}else
+				{echo "images/testImages/profilePic.png";}?>" style="width: 30px; height: 30px;"></a>
 
 			<span class="menuInputDiv">
 				<input id="menuInput">
@@ -79,12 +79,12 @@ include 'scripts/PHP_Includes/db_conx.php';
 					<div id="userPhotoDiv">
 						<a href="uploadProfilePicture.php"><img id="uploadProfilePicture" class="userProfilePic" src="<?php 
 						if($checkUser!= null && $checkUser != $username){
-							echo "../../users/" . $checkUser . "/profilePic/" . $lastUpdate . ".jpg";
+							echo "users/" . $checkUser . "/profilePic/" . $lastUpdate . ".jpg";
 						}
 						elseif($profilePicLastUpdate != null){
 							echo $profilePicTarget;
 						}else{
-							echo "../../images/testImages/profilePic.png";
+							echo "images/testImages/profilePic.png";
 						}?>"></a>
 					</div>
 				Current Feedback Score
@@ -101,7 +101,7 @@ include 'scripts/PHP_Includes/db_conx.php';
 				<a href="toggleContactsView.php"><span id="toggleContactView">(Toggle View)</span></a>
 				<div id="leftContactsScroll">
 					<div id="contactsDiv">
-						<a href="../../userProfile.php?userName=eckloffkj"><img src="../../users/eckloffkj/profilePic/20140225230810.jpg" class="userContacts"></a>
+						<a href="userProfile.php?userName=eckloffkj"><img src="../../users/eckloffkj/profilePic/20140225230810.jpg" class="userContacts"></a>
 						<img src="images/testImages/headProfilePic.png" class="userContacts">
 						<img src="images/testImages/headProfilePic.png" class="userContacts">
 						<img src="images/testImages/headProfilePic.png" class="userContacts">

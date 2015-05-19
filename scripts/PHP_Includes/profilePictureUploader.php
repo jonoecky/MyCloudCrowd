@@ -14,9 +14,20 @@ $str2 = $newDateTime ->format('ymdhis');
 
 $targetPath = $targetPath. "$str" . ".jpg";
 
-if ($_FILES['uploadedProfilePicture']['name'] < 50000){
-	if (move_uploaded_file($_FILES['uploadedProfilePicture']['tmp_name'], $targetPath)){
+$fileName = $_FILES["newPic"]["name"]; // The file name
+$fileTmpLoc = $_FILES["newPic"]["tmp_name"]; // File in the PHP tmp folder
+$fileType = $_FILES["newPic"]["type"]; // The type of file it is
+$fileSize = $_FILES["newPic"]["size"]; // File size in bytes
+$fileErrorMsg = $_FILES["newPic"]["error"]; // 0 for false... and 1 for true
+
+if (!$fileTmpLoc) { // if file not chosen
+	echo "ERROR: Please browse for a file before clicking the upload button.";
+	exit();
+}
+
+if(move_uploaded_file($fileTmpLoc, $targetPath)){
 // CREATE NEW IMAGE AS 500PX WIDE -------------------------------->
+	
 		$imgSize = getimagesize($targetPath);
 		$imgWidth = $imgSize[0];
 		$imgHeight = $imgSize[1];
@@ -47,10 +58,9 @@ if ($_FILES['uploadedProfilePicture']['name'] < 50000){
 		    unlink($file); 
 		}
 		
+		echo "Upload Successful";
 		$_SESSION['uploadFinished'] = true;
-		
-		header('location: ../../uploadProfilePicture.php');
+		//header('location: ../../uploadProfilePicture.php');
 	}else{
-		header('location: ../../home.php');
+		echo "Upload failed";
 	}
-}
